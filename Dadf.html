@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!---------animation cdn----------->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-------------------->
+    <link rel="stylesheet" href="css/style-dadf.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    //--------------jquery--------------
+    $(window).load(function() {
+        $('.loading').delay(1820).fadeOut('fast', function() {
+            $('body').removeClass('preloading');
+            $('div').removeClass('row-heart');
+            $('div').removeClass('loader');
+            $('.content').css({'opacity': 1, 'visibility':'visible'});
+            $('.animate__animated').addClass('animate__backInDown');
+        });
+        const phaohoa = document.getElementById("phaohao");
+        $('.nen').click(function(){
+            $('#phaohoa').addClass('pyro');
+            $('body').css({'overflow': 'hidden'});
+        })
+        $('#phaohoa').delay(10000).fadeOut('fast',function(){
+            $('#phaohoa').removeClass('pyro');
+        });
+        $('#switch').click(function(){
+            if($('.bg-hong')[0]){
+                $('.container').removeClass('bg-hong').addClass('bg-den');
+            }else{
+                $('.container').removeClass('bg-den').addClass('bg-hong');
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="container bg-hong">
+    <!-- loading -->
+    <div class="row-heart">
+        <div class="loader"><div></div></div>
+    </div>
+    <div class="loading">
+        <div class="progress">
+            <span >Loading...</span>
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+    <!----------------->
+        <div class="content">
+            <div class="grid-container ">
+                <div class="grid-item"> </div>
+                <div class="grid-item"> </div>
+                <div class="grid-item float-right" style="text-align: right;">
+                    <div class="love">
+                        <input id="switch" type="checkbox">
+                        <label class="love-heart" for="switch">
+                        <i class="left"></i>
+                        <i class="right"></i>
+                        <i class="bottom"></i>
+                        <div class="round"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="phaohoa" class=""><div class="before"></div><div class="after"></div></div>
+            <div class="ct">
+                <h1 class="animate__animated">Đây là nội dung của trang</h1>
+                <br>
+                <button class="nen">HOVER ME</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

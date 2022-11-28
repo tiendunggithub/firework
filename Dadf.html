@@ -31,6 +31,7 @@
         const phaohoa = document.getElementById("phaohao");
         $('.nen').click(function(){
             $('#phaohoa').addClass('pyro');
+            $('#phaohoa').css({'display':'block'});
             $('body').css({'overflow': 'hidden'});
         })
         $('#phaohoa').delay(10000).fadeOut('fast',function(){
@@ -47,7 +48,7 @@
     </script>
 </head>
 <body>
-    <div class="container bg-hong">
+<div class="container bg-hong">
     <!-- loading -->
     <div class="row-heart">
         <div class="loader"><div></div></div>
@@ -61,30 +62,30 @@
         </div>
     </div>
     <!----------------->
-        <div class="content">
-            <div class="grid-container ">
-                <div class="grid-item"> </div>
-                <div class="grid-item"> </div>
-                <div class="grid-item float-right" style="text-align: right;">
-                    <div class="love">
-                        <input id="switch" type="checkbox">
-                        <label class="love-heart" for="switch">
-                        <i class="left"></i>
-                        <i class="right"></i>
-                        <i class="bottom"></i>
-                        <div class="round"></div>
-                        </label>
-                    </div>
+    <div class="content">
+        <div class="grid-container ">
+            <div class="grid-item"> </div>
+            <div class="grid-item"> </div>
+            <div class="grid-item float-right" style="text-align: right;">
+                <div class="love">
+                    <input id="switch" type="checkbox">
+                    <label class="love-heart" for="switch">
+                    <i class="left"></i>
+                    <i class="right"></i>
+                    <i class="bottom"></i>
+                    <div class="round"></div>
+                    </label>
                 </div>
             </div>
-            
-            <div id="phaohoa" class=""><div class="before"></div><div class="after"></div></div>
-            <div class="ct">
-                <h1 class="animate__animated">Đây là nội dung của trang</h1>
-                <br>
-                <button class="nen">HOVER ME</button>
-            </div>
+        </div>
+        <div id="phaohoa" class=""><div class="before"></div><div class="after"></div></div>
+        <div class="ct">
+            <div class="card"></div><br>
+            <h1 class="animate__animated">Đây là nội dung của trang</h1>
+            <br>
+            <button class="nen">HOVER ME</button>
         </div>
     </div>
+</div>
 </body>
 </html>
